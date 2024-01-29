@@ -37,8 +37,8 @@ class Server:
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Function that returns the appropriate page of the dataset"""
 
-        assert type(page) == int and page > 0
-        assert type(page_size) == int and page_size > 0
+        assert type(page) is int and page > 0
+        assert type(page_size) is int and page_size > 0
 
         start_index, end_index = index_range(page, page_size)
         page = []
@@ -52,8 +52,8 @@ class Server:
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Any]:
         """Function that returns a dictionary containing page data"""
 
-        assert type(page) == int and page > 0
-        assert type(page_size) == int and page_size > 0
+        assert type(page) is int and page > 0
+        assert type(page_size) is int and page_size > 0
 
         total_pages = math.floor(len(self.dataset()) / page_size)
         return {"page_size": len(self.get_page(page, page_size)),
