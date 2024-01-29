@@ -43,7 +43,7 @@ class Server:
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """Function that returns all data even if deleted by prev query"""
 
-        assert type(index) is int and type(page_size) 1s int
+        assert type(index) is int and type(page_size) is int
         assert 0 <= index < len(self.indexed_dataset())
 
         next_index = index + page_size
