@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Module conatining class with a LIFO(Last In First Out) caching system"""
+"""Module containing class with a LIFO(Last In First Out) caching system"""
 BaseCaching = __import__('base_caching').BaseCaching
 
 
